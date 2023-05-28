@@ -1,0 +1,169 @@
+<view class="UnderTheWindow">
+  <view class="TopBar">
+    <view class="TopBarItems {{currentChart=='轨迹' ? 'TopBarItemsHover' : ''}}" id="轨迹" bindtap="ChooseChart">轨迹<view class="TopBarItemLine" hidden="{{currentChart!='轨迹'}}"></view>
+    </view>
+    <view class="TopBarItems {{currentChart=='配速' ? 'TopBarItemsHover' : ''}}" id="配速" bindtap="ChooseChart">配速<view class="TopBarItemLine" hidden="{{currentChart!='配速'}}"></view>
+    </view>
+    <view class="TopBarItems {{currentChart=='图表' ? 'TopBarItemsHover' : ''}}" id="图表" bindtap="ChooseChart">图表<view class="TopBarItemLine" hidden="{{currentChart!='图表'}}"></view>
+    </view>
+    <view class="TopBarItems {{currentChart=='详情' ? 'TopBarItemsHover' : ''}}" id="详情" bindtap="ChooseChart">详情<view class="TopBarItemLine" hidden="{{currentChart!='详情'}}"></view>
+    </view>
+  </view>
+
+  <view class="MapContainer">
+    <view class="MapBody">
+      <map latitude="34.12989823739486" longitude="108.83094352519151" show-location="false" class="Map" polyline="{{RotuneLine}}" bindtap="TestMap"></map>
+    </view>
+
+    <view class="MapFunctionBudContainer">
+      <view class="MapFunctionBuds">
+        <image src="/images/1.jpg" class="MapFunctionBudImgs"></image>
+      </view>
+      <view class="MapFunctionBuds">
+        <image src="/images/2.jpg" class="MapFunctionBudImgs"></image>
+      </view>
+      <view class="MapFunctionBuds">
+        <image src="/images/3.jpg" class="MapFunctionBudImgs"></image>
+      </view>
+      <view class="MapFunctionBuds">
+        <image src="/images/4.jpg" class="MapFunctionBudImgs"></image>
+      </view>
+      <view class="MapFunctionBuds">
+        <image src="/images/5.jpg" class="MapFunctionBudImgs"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="BottomBar">
+
+    <view class="BottomBar_Fixed" catchtap="OpenSettingWindow">
+      <view class="BottomBar_1">
+        <view class="DistanceContainer">
+          <view class="DistanceData">{{Distance}}</view>
+
+          <view class="DistanceFon">公里</view>
+        </view>
+
+        <view class="DistanceTrace">动态轨迹</view>
+      </view>
+      <view class="BottomBar_2">
+        <view class="Bar_2_DateContainer">
+          <view class="Bar_2_Date">{{Date}} {{Time}}</view>
+        </view>
+
+        <view class="Bar_2_Liner_Gradual"></view>
+        <view class="Bar_2_Speed_maxAmix">
+          <view class="Bar_2_Speed_min">最慢{{MinSpeed}}</view>
+          <view class="Bar_2_Speed_max">最快{{MaxSpeed}}</view>
+        </view>
+
+      </view>
+      <view class="BottomBar_3">
+        <view class="Bar_3_BlocksContainer">
+          <view class="Bar_3_Blocks">
+            <view class="Bar_3_Cates">运动时间</view>
+            <view class="Bar_3_Values">{{WorkOutDuration}}</view>
+          </view>
+          <view class="Bar_3_Blocks">
+            <view class="Bar_3_Cates">平均配速</view>
+            <view class="Bar_3_Values">{{AverageSpeed}}</view>
+          </view>
+          <view class="Bar_3_Blocks">
+            <view class="Bar_3_Cates">热量</view>
+            <view class="Bar_3_Values">{{Calorie}}</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<view class="MaskTheUnder" hidden="{{!IsSettingOpen}}"></view>
+
+<view class="SettingWindowContainer {{IsSettingOpen ? 'SettingWindowContainerAnimation' : ''}}">
+  <view class="SettingWindow">
+    <view class="SettingBar_Exit">
+      <view class="TopTip">点击页面数据处打开该菜单！</view>
+      <image src="/images/Exit.jpg" class="Exit_icon" bindtap="CloseSettingWindow"></image>
+    </view>
+    <scroll-view class="SettingScroll" scroll-y="true">
+
+      <view class="SettingBarContainer">
+        <view class="SettingBarCate">距离修改</view>
+        <view class="SettingBarData">
+          <input class="SettingInput" placeholder="{{Distance}}" confirm-type="done" bindinput="SettingDistance" maxlength="5" />
+          <view class="SettingBarDimention">公里</view>
+        </view>
+      </view>
+      <view class="SettingBarContainer">
+        <view class="SettingBarCate">日期修改</view>
+        <view class="SettingBarData">
+          <view class="SettingBarValue" style="width: 360rpx; font-size: 26rpx;">
+
+            <picker mode="date" value="{{Date}}" bindchange="SettingDate">
+              <view class="SettingDate">
+                {{Date}}
+              </view>
+            </picker>
+
+            <picker mode="time" value="{{Time}}" bindchange="SettingTime">
+              <view class="SettingTime">
+                {{Time}}
+              </view>
+            </picker>
+
+          </view>
+        </view>
+      </view>
+      <view class="SettingBarContainer">
+        <view class="SettingBarCate">最值速度修改</view>
+        <view class="SettingBarData">
+          <!-- <view class="SettingBarValue">{{MinSpeed}} {{MaxSpeed}}</view> -->
+          <input class="SettingInput" placeholder="{{MinSpeed}}" confirm-type="done" bindinput="SettingMinPace" maxlength="5" />
+          <input class="SettingInput" placeholder="{{MaxSpeed}}" confirm-type="done" bindinput="SettingMaxPace" maxlength="5" />
+          <view class="SettingBarDimention"></view>
+        </view>
+      </view>
+      <view class="SettingBarContainer">
+        <view class="SettingBarCate">运动时间修改</view>
+        <view class="SettingBarData">
+          <!-- <view class="SettingBarValue">{{WorkOutDuration}}</view> -->
+          <input class="SettingInput" placeholder="{{WorkOutDuration}}" confirm-type="done" bindinput="SettingDuration" maxlength="8" />
+          <view class="SettingBarDimention"></view>
+        </view>
+      </view>
+
+      <view class="SettingBarContainer">
+        <view class="SettingBarCate">平均配速修改</view>
+        <view class="SettingBarData">
+          <input class="SettingInput" placeholder="{{AverageSpeed}}" confirm-type="done" bindinput="SettingAveragePace" maxlength="7" />
+          <view class="SettingBarDimention"></view>
+        </view>
+      </view>
+
+      <view class="SettingBarContainer">
+        <view class="SettingBarCate">热量修改</view>
+        <view class="SettingBarData">
+          <input class="SettingInput" placeholder="{{Calorie}}" confirm-type="done" bindinput="SettingCalorie" maxlength="5" />
+          <view class="SettingBarDimention"></view>
+        </view>
+      </view>
+
+      <view class="SettingBarContainer">
+        <view class="SettingBarCate">路线修改(试用)</view>
+        <view class="SettingBarData">
+          <button bindtap="RoutineA" type="default" plain="true">更换路线</button>
+        </view>
+      </view>
+
+      <view class="SettingBarContainer">
+        <view class="SettingBarCate">随机数值(大于3km)</view>
+        <view class="SettingBarData">
+          <button bindtap="RandomValue" type="default" plain="true">随机</button>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

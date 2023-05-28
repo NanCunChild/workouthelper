@@ -1,0 +1,407 @@
+.UnderTheWindow {
+  width: 760rpx;
+  height: auto;
+  justify-content: center;
+}
+
+.MaskTheUnder {
+  width: 760rpx;
+  height: 1580rpx;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  background-color: rgb(110, 110, 110);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.TopBar {
+  width: 760rpx;
+  height: 80rpx;
+  display: flex;
+  margin-top: 0rpx;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(252, 252, 252);
+}
+
+.TopBarItems {
+  width: 80rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rpx 9rpx 2rpx 9rpx;
+  justify-content: center;
+  align-items: center;
+  color: rgb(112, 112, 112);
+}
+.TopBarItemsHover{
+  color: rgb(234, 103, 49);
+  font-weight: 600;
+}
+.TopBarItemLine{
+  width: 80rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  background-color: rgb(234, 103, 49);
+}
+
+.MapContainer {
+  /* position: relative; */
+  width: 760rpx;
+  height: 960rpx;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: flex-start;
+  background-color: rgb(221, 221, 221);
+}
+
+.MapBody {
+  width: 760rpx;
+}
+
+.Map {
+  width: 760rpx;
+  height: 1200rpx;
+}
+
+.MapFunctionBudContainer {
+  width: 74rpx;
+  margin: 30rpx 30rpx 0rpx 0rpx;
+  display: flex;
+  position: absolute;
+  right: 0rpx;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* position: fixed;
+  right: 20rpx;
+  top: 40rpx; */
+  /* background-color: rgb(190, 190, 190); */
+}
+
+.MapFunctionBuds {
+  width: 81rpx;
+  height: 81rpx;
+  margin-top: 21rpx;
+  margin-bottom: 10rpx;
+  /* border: aliceblue 0rpx solid;
+  border-radius: 20rpx; */
+}
+
+.MapFunctionBudImgs {
+  width: 82rpx;
+  height: 82rpx;
+  border: aliceblue 0rpx solid;
+  border-radius: 41rpx;
+  box-shadow: rgb(190, 190, 190) 0rpx 6rpx 8rpx;
+}
+
+
+.BottomBar {
+  width: 760rpx;
+  height: 460rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  /* background-color: rgb(245, 245, 245); */
+  /* background: linear-gradient(rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 1)); */
+}
+
+.BottomBar_Fixed {
+  width: 760rpx;
+  height: 440rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  position: fixed;
+  left: 0rpx;
+  bottom: -40rpx;
+  /* background-color: rgb(245, 245, 245); */
+  background: linear-gradient(rgba(247, 247, 247, 0.1), rgb(247, 247, 247), rgb(247, 247, 247), rgb(247, 247, 247), rgb(247, 247, 247));
+}
+
+.BottomBar_1 {
+  width: 740rpx;
+  height: 120rpx;
+  margin-top: 32rpx;
+  margin-bottom: 1rpx;
+  display: flex;
+  justify-content: space-between;
+
+  /* background-color: rgb(104, 104, 104); */
+}
+
+.DistanceContainer {
+  display: flex;
+  height: 104rpx;
+  width: auto;
+}
+
+.DistanceData {
+  font-size: 100rpx;
+  font-weight: 500;
+  width: auto;
+  height: 100rpx;
+  margin: 0rpx 5rpx 3rpx 20rpx;
+  display: flex;
+  text-align: left;
+}
+
+.DistanceFon {
+  width: 64rpx;
+  height: 28rpx;
+  font-size: 24rpx;
+  /* margin-bottom: 14rpx; */
+  align-self: flex-end;
+
+  color: rgb(107, 107, 107);
+  /* background-color: aliceblue; */
+}
+
+.DistanceTrace {
+  width: 146rpx;
+  height: 54rpx;
+  font-size: 27rpx;
+  font-weight: 500;
+  display: flex;
+  margin-right: 36rpx;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 8rpx;
+  line-height: 49rpx;
+  color: aliceblue;
+  border: burlywood 0rpx solid;
+  border-radius: 29rpx;
+  align-self: flex-end;
+  background-color: #fa6724;
+}
+
+.BottomBar_2 {
+  width: 740rpx;
+  height: 80rpx;
+  margin-top: 2rpx;
+  margin-bottom: 5rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Bar_2_DateContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 730rpx;
+  margin-bottom: 10rpx;
+}
+
+.Bar_2_Date {
+  height: 26rpx;
+  width: 300rpx;
+  font-size: 23rpx;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+
+  color: rgb(114, 114, 114);
+}
+
+.Bar_2_Liner_Gradual {
+  display: flex;
+  width: 690rpx;
+  height: 6rpx;
+  border: 0rpx wheat solid;
+  border-radius: 3rpx;
+  background: linear-gradient(to right, rgb(137, 209, 70), orange, rgb(179, 9, 9));
+}
+
+.Bar_2_Speed_maxAmix {
+  width: 720rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Bar_2_Speed_min {
+  font-size: 20rpx;
+  display: flex;
+  margin: 8rpx 5rpx 5rpx 12rpx;
+  align-self: flex-start;
+  color: rgb(137, 209, 70);
+}
+
+.Bar_2_Speed_max {
+  font-size: 20rpx;
+  display: flex;
+  margin: 8rpx 14rpx 5rpx 5rpx;
+  align-self: flex-start;
+  justify-self: flex-end;
+  color: rgb(179, 9, 9);
+}
+
+.BottomBar_3 {
+  height: 190rpx;
+  width: 740rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.Bar_3_BlocksContainer {
+  display: flex;
+  width: 720rpx;
+  justify-content: space-between;
+}
+
+.Bar_3_Blocks {
+  width: 150rpx;
+  height: 160rpx;
+  margin: 10rpx 10rpx 5rpx 10rpx;
+  /* border: solid rgb(184, 170, 149) 2rpx; */
+}
+
+.Bar_3_Cates {
+  width: 200rpx;
+  display: flex;
+  font-size: 26rpx;
+  margin: 5rpx 1rpx 16rpx 2rpx;
+  color: rgb(107, 107, 107);
+}
+
+.Bar_3_Values {
+  font-size: 38rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  width: 200rpx;
+  display: flex;
+  margin: 10rpx 2rpx 5rpx 2rpx;
+}
+
+.SettingWindowContainer {
+  width: 760rpx;
+  display: flex;
+
+  position: fixed;
+  top: -900rpx;
+  justify-content: center;
+  transition: All 0.4s ease;
+  z-index: 2;
+}
+
+.SettingWindowContainerAnimation {
+  top: 200rpx;
+}
+
+.SettingWindow {
+  width: 680rpx;
+  height: 820rpx;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  /* position: fixed;
+  left: 80rpx;
+  top: 100rpx; */
+  background-color: rgb(245, 245, 245);
+  border: aliceblue 0rpx solid;
+  border-radius: 20rpx;
+  opacity: 0.85;
+}
+
+.SettingBar_Exit {
+  display: flex;
+  justify-content: space-between;
+  width: 670rpx;
+  height: 48rpx;
+  margin-bottom: 20rpx;
+  border-bottom: rgb(172, 172, 172) 2epx solid;
+  /* border: rgb(57, 86, 214) 2rpx solid; */
+}
+
+.TopTip{
+  display: flex;
+  margin: 15rpx 20rpx;
+  font-size: 32rpx;
+  color: rgb(184, 184, 184);
+}
+
+.Exit_icon {
+  width: 46rpx;
+  height: 46rpx;
+  margin: 10rpx 10rpx 5rpx 5rpx;
+  display: flex;
+
+}
+
+.SettingBarContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 670rpx;
+  height: 120rpx;
+  border-bottom: rgb(172, 172, 172) 2rpx solid;
+}
+.SettingBar{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.SettingBarCate {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 260rpx;
+  height: 81rpx;
+  font-size: 38rpx;
+  /* background-color: grey; */
+}
+
+.SettingBarData {
+  width: 360rpx;
+  height: 108rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: grey; */
+}
+
+.SettingBarValue {
+  width: 240rpx;
+  height: 100rpx;
+  justify-content: center;
+  align-content: center;
+  font-size: 52rpx;
+  /* background-color: honeydew; */
+}
+
+.SettingBarDimention {
+  width: 80rpx;
+  height: 30rpx;
+  justify-content: center;
+  /* align-items: flex-end; */
+  font-size: 28rpx;
+  /* background-color: rgb(6, 211, 6); */
+}
+.SettingInput{
+  width: 300rpx;
+  height: 30rpx;
+  display: flex;
+  padding-left: 16rpx;
+  margin-right: 20rpx;
+  border: rgb(153, 153, 153) 2rpx solid;
+  border-radius: 20rpx;
+}
+.SettingDate{
+  font-size: 36rpx;
+  margin: 5rpx 2rpx 10rpx 2rpx;
+}
+.SettingTime{
+  font-size: 32rpx;
+  margin: 10rpx 2rpx 8rpx 2rpx;
+}
+
+.SettingScroll{
+  width: 672rpx;
+  height: 700rpx;
+  margin: 2rpx;
+}

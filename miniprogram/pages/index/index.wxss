@@ -1,0 +1,35 @@
+.body{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.title{
+  width: 760rpx;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 48rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+.ChooseList{
+  width: 680rpx;
+  height: 720rpx;
+  display: flex;
+  justify-content: center;
+  border: rgb(160, 160, 160) 2rpx solid;
+  border-radius: 20rpx;
+}
+.ListItem{
+  width: 720rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-bottom: rgb(172, 172, 172) 2rpx solid;
+  font-size: 36rpx;
+  color: rgb(49, 49, 49);
+}
+.ListItemDisabled{
+  color: rgb(168, 168, 168);
+}

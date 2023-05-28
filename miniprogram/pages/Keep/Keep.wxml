@@ -1,0 +1,39 @@
+<!--pages/Keep/Keep.wxml-->
+<view>还没开发。满意了吧？</view>
+<view>
+  <view class="mapContainer">
+    <view class="mapBody">
+      <map latitude="34.12989823739486" longitude="108.83094352519151" show-location="false" class="map" polyline="{{RotuneLine}}"></map>
+    </view>
+
+    <view class="leftToolsBar">
+      <view class="leftToolsItems" style="margin-top: 10rpx;">
+        <image src="/images/Keep_Trace.jpg" class="leftToolsImgs"></image>
+      </view>
+      <view class="leftToolsItems">
+        <image src="/images/Keep_Edit.jpg" class="leftToolsImgs"></image>
+      </view>
+      <view class="leftToolsItems">
+        <image src="/images/Keep_Privite.jpg" class="leftToolsImgs"></image>
+      </view>
+    </view>
+    <view class="rightToolButton">Over The Map, More Button (Right & Top)</view>
+  </view>
+
+  <view>
+    <scroll-view scroll-y="true" class="scrolls">
+      <view class="functionField">
+        <view class="cardsContainer">
+          <view class="cards">Distance</view>
+        </view>
+        <view class="cardsContainer">
+          <view class="cards">Invitation</view>
+        </view>
+        <view class="cardsContainer">
+          <view class="cards">Rank</view>
+        </view>
+      </view>
+
+    </scroll-view>
+  </view>
+</view>

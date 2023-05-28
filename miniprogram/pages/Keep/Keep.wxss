@@ -1,0 +1,82 @@
+/* pages/Keep/Keep.wxss */
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 960rpx;
+  display: flex;
+  align-items: flex-start;
+  background-color: rgb(221, 221, 221);
+}
+
+.mapBody {
+  width: 100%;
+}
+
+.map {
+  width: 100%;
+  height: 960rpx;
+  display: flex;
+  align-items: flex-start;
+  background-color: rgb(221, 221, 221);
+}
+
+.leftToolsBar {
+  width: 68rpx;
+  margin: 30rpx 30rpx 0rpx 0rpx;
+  
+  background-color: rgb(255, 255, 255);
+  border-radius: 30rpx;
+  display: flex;
+  position: absolute;
+  left: 10rpx;
+  bottom: 100rpx;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.leftToolsItems{
+  width: 64rpx;
+  height: 64rpx;
+  padding: 5rpx;
+  border-top: rgb(219, 219, 219) 2rpx solid;
+  /* margin-top: 2rpx;
+  margin-bottom: 2rpx; */
+}
+.leftToolsImgs{
+  width: 58rpx;
+  height: 58rpx;
+  /* border: rgb(255, 255, 255) 0rpx solid; */
+  /* border-radius: 41rpx; */
+  /* box-shadow: rgb(190, 190, 190) 0rpx 6rpx 8rpx; */
+}
+
+.rightToolButton {
+  width: 74rpx;
+  margin: 30rpx 30rpx 0rpx 0rpx;
+  display: flex;
+  position: absolute;
+  right: 0rpx;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.functionField{
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+.cardsContainer{
+  width: 100%;
+  height: auto;
+}
+.cards{
+  width: 720rpx;
+  height: auto;
+  background-color: rgb(253, 253, 253);
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+}
+.scrolls{
+  position: absolute;
+  top: 920rpx;
+}

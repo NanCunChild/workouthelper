@@ -1,0 +1,8 @@
+<view class="body">
+  <view class="title">截屏炫耀之后还是要锻炼哦~</view>
+  <scroll-view class="ChooseList" scroll-y="true">
+    <view class="ListItem" bindtap="GotoHUAWEIHealth">华为运动与健康</view>
+    <view class="ListItem ListItemDisabled" bindtap="GotoKeep">Keep (开发中)</view>
+    <view class="ListItem ListItemDisabled">敬请期待</view>
+  </scroll-view>
+</view>
