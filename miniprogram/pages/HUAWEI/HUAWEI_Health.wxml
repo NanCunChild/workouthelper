@@ -1,5 +1,5 @@
 <view class="UnderTheWindow">
-  <view class="TopBar">
+  <view class="TopBar" hidden="{{isEditMode}}">
     <view class="TopBarItems {{currentChart=='轨迹' ? 'TopBarItemsHover' : ''}}" id="轨迹" bindtap="ChooseChart">轨迹<view class="TopBarItemLine" hidden="{{currentChart!='轨迹'}}"></view>
     </view>
     <view class="TopBarItems {{currentChart=='配速' ? 'TopBarItemsHover' : ''}}" id="配速" bindtap="ChooseChart">配速<view class="TopBarItemLine" hidden="{{currentChart!='配速'}}"></view>
@@ -10,12 +10,18 @@
     </view>
   </view>
 
+  <view class="TopBar" hidden="{{!isEditMode}}">
+    <view class="TopBarItemsEM" bindtap="ClearRoutines">清除路线</view>
+    <view class="TopBarItemsEM" bindtap="FinishEditMode">完成修改</view>
+    <view class="TopBarItemsEM" bindtap="ExitEditMode">退出修改</view>
+  </view>
+
   <view class="MapContainer">
     <view class="MapBody">
-      <map latitude="34.12989823739486" longitude="108.83094352519151" show-location="false" class="Map" polyline="{{RotuneLine}}" bindtap="TestMap"></map>
+      <map latitude="34.12989823739486" longitude="108.83094352519151" show-location="false" class="Map" polyline="{{RotuneLine}}" bindtap="TapMap"></map>
     </view>
 
-    <view class="MapFunctionBudContainer">
+    <view class="MapFunctionBudContainer" hidden="{{isEditMode}}" bindtap="RandomValue">
       <view class="MapFunctionBuds">
         <image src="/images/1.jpg" class="MapFunctionBudImgs"></image>
       </view>
@@ -34,7 +40,7 @@
     </view>
   </view>
 
-  <view class="BottomBar">
+  <view class="BottomBar" hidden="{{isEditMode}}">
 
     <view class="BottomBar_Fixed" catchtap="OpenSettingWindow">
       <view class="BottomBar_1">
@@ -152,9 +158,16 @@
       </view>
 
       <view class="SettingBarContainer">
-        <view class="SettingBarCate">路线修改(试用)</view>
+        <view class="SettingBarCate">路线修改(预设)</view>
         <view class="SettingBarData">
           <button bindtap="RoutineA" type="default" plain="true">更换路线</button>
+        </view>
+      </view>
+
+      <view class="SettingBarContainer">
+        <view class="SettingBarCate">路线编辑(自定义)</view>
+        <view class="SettingBarData">
+          <button bindtap="EditRoutine" type="default" plain="true">进入编辑</button>
         </view>
       </view>
 

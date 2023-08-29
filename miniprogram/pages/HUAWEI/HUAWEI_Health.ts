@@ -1,7 +1,7 @@
 // pages/HUAWEI/HUAWEI_Health.ts
 Page({
   data: {
-    Distance: 3.02,
+    Distance: "3.02",
     Date: "2023年2月15日",
     Time: "6:57",
     MinSpeed: "7'18",
@@ -10,7 +10,7 @@ Page({
     AverageSpeed: "6'19''",
     Calorie: "195",
     currentChart: "轨迹",
-
+    isEditMode: false,
     IsSettingOpen: true,
     RotuneLine: [{
       points: [
@@ -177,8 +177,20 @@ Page({
       Calorie: e.detail.value
     })
   },
-  TestMap: function (e: any) {
-    console.log("{latitude:\"" + e.detail.latitude + "\"", ",longitude:\"" + e.detail.longitude + "\"},");
+  TapMap: function (e: any) {
+    if (this.data.isEditMode == false) return;
+    var PointInfo = {
+      latitude: e.detail.latitude.toString(),
+      longitude: e.detail.longitude.toString()
+    };
+  
+    var Points = [...this.data.RotuneLine[0].points]; // 克隆 TempRoutine 数组
+    Points.push(PointInfo);
+    this.setData({
+      ['RotuneLine[0].points']:Points,
+    })
+    console.log(Points);
+
   },
   RoutineA: function () {
     var DetermineRand = parseInt((Math.random() * 10).toFixed(0));
@@ -528,6 +540,30 @@ Page({
       ['RotuneLine[0].points']: Routine//这个赋值很妙，不大会
     })
   },
+  EditRoutine: function () {
+    this.setData({
+      isEditMode: true,
+      IsSettingOpen: false,
+      // ['RotuneLine[0].points']: []
+    })
+  },
+
+  ClearRoutines: function () {
+    this.setData({
+      ['RotuneLine[0].points']: []
+    })
+  },
+  ExitEditMode: function () {
+    this.setData({
+      isEditMode: false,
+      ['RotuneLine[0].points']: []
+    })
+  },
+  FinishEditMode: function () {
+    this.setData({
+      isEditMode: false
+    })
+  },
   RandomValue: function () {
     var Distance = (3.0 + Math.random() * 5).toFixed(2);//小于8km
     // var Today=Date()
@@ -544,7 +580,7 @@ Page({
 
     console.log(Distance, MaxPaceMinute, MaxPaceSecond, MinPaceMinute, MinPaceSecond, DurationMinute, AvgPaceMinute, Calorie);
     this.setData({
-      Distance: parseFloat(Distance),
+      Distance: parseFloat(Distance).toFixed(2),
       MaxSpeed: MaxPaceMinute.toString() + '\'' + MaxPaceSecond.toString(),
       MinSpeed: MinPaceMinute.toString() + '\'' + MinPaceSecond.toString(),
       WorkOutDuration: "00:" + DurationMinute + ":00",

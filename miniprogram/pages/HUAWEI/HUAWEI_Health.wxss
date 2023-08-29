@@ -35,6 +35,20 @@
   align-items: center;
   color: rgb(112, 112, 112);
 }
+
+.TopBarItemsEM{
+  width: 160rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rpx 9rpx 2rpx 9rpx;
+  justify-content: center;
+  align-items: center;
+  color: rgb(112, 112, 112);
+  border: rgb(150, 150, 150) solid 2rpx;
+  border-radius: 16rpx;
+}
+
 .TopBarItemsHover{
   color: rgb(234, 103, 49);
   font-weight: 600;
@@ -211,8 +225,8 @@
   display: flex;
   width: 690rpx;
   height: 6rpx;
-  border: 0rpx wheat solid;
-  border-radius: 3rpx;
+  /* border: 0rpx wheat solid; */
+  border-radius: 6rpx;
   background: linear-gradient(to right, rgb(137, 209, 70), orange, rgb(179, 9, 9));
 }
 
