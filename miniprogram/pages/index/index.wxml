@@ -1,8 +1,50 @@
 <view class="body">
-  <view class="title">截屏炫耀之后还是要锻炼哦~</view>
+    <!-- <view class="title">截屏炫耀之后还是要锻炼哦~</view>
   <scroll-view class="ChooseList" scroll-y="true">
     <view class="ListItem" bindtap="GotoHUAWEIHealth">华为运动与健康</view>
     <view class="ListItem ListItemDisabled" bindtap="GotoKeep">Keep (开发中)</view>
     <view class="ListItem ListItemDisabled">敬请期待</view>
-  </scroll-view>
+  </scroll-view> 
+  -->
+
+    <div class="introContiner">
+        <div class="introTitle">对策体育</div>
+        <div class="introContent">
+            <div class="pata">这是一个可以保证你在保持偷懒的本性的同时，体育期末不挂的神器！</div>
+            <div class="pata">NanCunChild 如是说道</div>
+        </div>
+    </div>
+    <div class="itemContainer">
+        <div class="item" bind:tap="GotoHUAWEIHealth">
+            <div class="itemTextContainer">
+                <div class="itemTextTitle">华为运动与健康</div>
+                <div class="itemTextIntro">NanCunChild</div>
+            </div>
+            <div class="itemImgContainer">
+                <image class="itemImg" src="/images/ItemLogos/HUAWEI_Health_Logo.png"></image>
+            </div>
+        </div>
+
+        <div class="item" bind:tap="GotoKeep">
+            <div class="itemTextContainer">
+                <div class="itemTextTitle">Keep</div>
+                <div class="itemTextIntro">没弄好，在偷懒~</div>
+            </div>
+            <div class="itemImgContainer">
+                <image class="itemImg" src="/images/ItemLogos/Keep_Logo.png"></image>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="itemTextContainer">
+                <div class="itemTextTitle">还有谁？？！</div>
+                <div class="itemTextIntro">都没弄好呐！</div>
+            </div>
+            <div class="itemImgContainer">
+                <image class="itemImg"></image>
+            </div>
+        </div>
+    </div>
+
+
 </view>
