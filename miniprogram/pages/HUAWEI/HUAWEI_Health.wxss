@@ -134,7 +134,7 @@
   left: 0rpx;
   bottom: -40rpx;
   /* background-color: rgb(245, 245, 245); */
-  background: linear-gradient(rgba(247, 247, 247, 0.1), rgb(247, 247, 247), rgb(247, 247, 247), rgb(247, 247, 247), rgb(247, 247, 247));
+  background: linear-gradient(#f7f7f756, #f7f7f7dc, #f7f7f7f5, #f7f7f7, #f7f7f7);
 }
 
 .BottomBar_1 {

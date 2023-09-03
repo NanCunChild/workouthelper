@@ -1,19 +1,16 @@
 <view class="body">
-    <!-- <view class="title">截屏炫耀之后还是要锻炼哦~</view>
-  <scroll-view class="ChooseList" scroll-y="true">
-    <view class="ListItem" bindtap="GotoHUAWEIHealth">华为运动与健康</view>
-    <view class="ListItem ListItemDisabled" bindtap="GotoKeep">Keep (开发中)</view>
-    <view class="ListItem ListItemDisabled">敬请期待</view>
-  </scroll-view> 
-  -->
-
     <div class="introContiner">
-        <div class="introTitle">对策体育</div>
+        <div class="introTitleBundle">
+        <div class="introLogoContainer"><image class="introLogo" src="/images/ItemLogos/WorkOutHelper_BW.png"></image></div>
+            <div class="introTitle">对策体育</div>
+        </div>
+
         <div class="introContent">
             <div class="pata">这是一个可以保证你在保持偷懒的本性的同时，体育期末不挂的神器！</div>
             <div class="pata">NanCunChild 如是说道</div>
         </div>
     </div>
+
     <div class="itemContainer">
         <div class="item" bind:tap="GotoHUAWEIHealth">
             <div class="itemTextContainer">

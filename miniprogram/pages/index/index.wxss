@@ -7,29 +7,48 @@ page {
 
 .body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 .introContiner {
     display: flex;
-    width: 720rpx;
+    flex-direction: column;
+    width: 680rpx;
     margin: 20rpx 5rpx;
     flex-wrap: wrap;
     background-color: #f3f3f3;
     border-radius: 20rpx;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, "Microsoft YaHei";
-    /* border: black 2rpx solid; */
-    /* min-height: 300rpx; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-items: flex-start;
+}
+
+.introTitleBundle{
+    display: flex;
+    align-items: center;
+    margin: 20rpx 5rpx 5rpx 24rpx;
+}
+.introLogoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 108rpx;
+    height: 108rpx;
+    margin: 10rpx;
+}
+.introLogo{
+    display: flex;
+    border-radius: 10rpx;
+    width: 100rpx;
+    height: 100rpx;
 }
 
 .introTitle {
     display: flex;
     align-items: center;
-    width: 700rpx;
     font-weight: 600;
-    margin: 30rpx 10rpx 20rpx 20rpx;
+    margin: 15rpx;
     font-size: 58rpx;
 }
 
@@ -37,9 +56,9 @@ page {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 700rpx;
     align-items: flex-start;
-    margin: 15rpx 20rpx 30rpx 20rpx;
+    margin: 10rpx 24rpx 30rpx 24rpx;
+    padding: 5rpx 20rpx 5rpx 20rpx;
     font-size: 28rpx;
     color: #666666;
 }

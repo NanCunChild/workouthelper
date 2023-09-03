@@ -1,12 +1,4 @@
 {
   "usingComponents": {},
-  "disableScroll": true,
-  "window": {
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "title",
-    "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light",
-    "enablePullDownRefresh": "false"
-  }
+  "disableScroll": true
 }
